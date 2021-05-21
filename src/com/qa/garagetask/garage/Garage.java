@@ -32,10 +32,8 @@ public class Garage {
 	}
 	
 	public void deleteVehicle(Vehicle entity) {
-		for(int i = 0; i < cearcGarage.size(); i++) {
-			System.out.println(cearcGarage.remove(i) + "left the garage");
-		}
-		
+		cearcGarage.remove(entity);
+		System.out.println(entity.getMake() + "\s" + entity.getType() + " has left the garage");
 	}
 	
 	public void getCearcGarage() {
