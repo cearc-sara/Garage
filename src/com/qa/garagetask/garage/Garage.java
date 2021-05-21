@@ -24,7 +24,11 @@ public class Garage {
 	List<Vehicle> cearcGarage = new ArrayList<>();
 	
 	public void addVehicle(Vehicle entity) {
+		if(cearcGarage == null) {
+			cearcGarage = new ArrayList<>();
+		}
 		cearcGarage.add(entity);
+		System.out.println(entity.getMake() + "\s" + entity.getType() + " entered the garage");
 	}
 	
 	public void deleteVehicle(Vehicle entity) {

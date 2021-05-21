@@ -6,10 +6,11 @@ public class Motorcycle extends Vehicle{
 	private boolean hasSideCar;
 	private boolean windshield;
 
-	public Motorcycle(String manufacturer, String model, int doors, boolean hasTires, boolean hasSideCar, boolean windshield) {
-		super(manufacturer, model, doors, hasTires);
+	public Motorcycle(String manufacturer, String model, int doors, boolean hasTires, boolean hasSideCar, boolean windshield, double price) {
+		super(manufacturer, model, doors, hasTires, price);
 		this.hasSideCar = hasSideCar;
 		this.windshield = windshield;
+		this.type = "MOTORCYCLE";
 	}
 
 	public boolean getSideCar() {
@@ -21,8 +22,9 @@ public class Motorcycle extends Vehicle{
 	}
 
 	@Override
-	public String toString() {
-		return "Motorcycle Manufacturer: " + this.getManufacturer();
+	public double getPrice() {
+		double taxes = super.getPrice() / 200 * 40;
+		return super.getPrice() + taxes;
 	}
 
 	@Override
