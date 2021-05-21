@@ -14,13 +14,14 @@ public class Runner {
 		Vehicle c = new Bus("Ford", "H3Z2", 3, true, 50, "Johnson and Johnson");
 		
 		Garage cearcGarage = new Garage("Cearc Garage");
-		System.out.println("Welcome to " + cearcGarage);
+		System.out.println("Welcome to " + cearcGarage.getGarageName());
 		
 		cearcGarage.addVehicle(a);
 		cearcGarage.addVehicle(b);
 		cearcGarage.addVehicle(c);
 		
 		
+		cearcGarage.getCearcGarage();
 		
 		
 	
