@@ -24,6 +24,9 @@ public class Runner {
 		System.out.println();
 		cearcGarage.getCearcGarage();
 		
+		System.out.println();
+		cearcGarage.deleteVehicle(b);
+		
 		
 	
 	}
