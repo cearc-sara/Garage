@@ -6,10 +6,11 @@ public class Bus extends Vehicle{
 	private int capacity;
 	private String company;
 
-	public Bus(String manufacturer, String model, int doors, boolean hasTires, int capacity, String company) {
-		super(manufacturer, model, doors, hasTires);
+	public Bus(String manufacturer, String model, int doors, boolean hasTires, int capacity, String company, double price) {
+		super(manufacturer, model, doors, hasTires, price);
 		this.capacity = capacity;
 		this.company = company;
+		this.type = "BUS";
 		
 	}
 	
@@ -22,8 +23,9 @@ public class Bus extends Vehicle{
 	}
 
 	@Override
-	public String toString() {
-		return "Bus Manufacturer: " + this.getManufacturer();
+	public double getPrice() {
+		double taxes = super.getPrice() / 200 * 90;
+		return super.getPrice() + taxes;
 	}
 
 	@Override

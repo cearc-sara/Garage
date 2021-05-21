@@ -6,10 +6,11 @@ public class Car extends Vehicle{
 	private int seats;
 	private String color;
 
-	public Car(String manufacturer, String model, int doors, boolean hasTires, int seats, String color) {
-		super(manufacturer, model, doors, hasTires);
+	public Car(String manufacturer, String model, int doors, boolean hasTires, int seats, String color, double price) {
+		super(manufacturer, model, doors, hasTires, price);
 		this.seats = seats;
 		this.color = color;
+		this.type = "CAR";
 	}
 	
 	public int getSeats() {
@@ -21,8 +22,9 @@ public class Car extends Vehicle{
 	}
 
 	@Override
-	public String toString() {
-		return "Car Manufacturer: " + this.getManufacturer();
+	public double getPrice() {
+		double taxes = super.getPrice() / 200 * 70;
+		return super.getPrice() + taxes;
 	}
 
 	@Override
