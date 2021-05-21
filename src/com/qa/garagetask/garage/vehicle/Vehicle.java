@@ -1,6 +1,8 @@
-package com.qa.garagetask;
+package com.qa.garagetask.garage.vehicle;
 
-public abstract class Vehicle {
+import com.qa.garagetask.garage.Garage;
+
+public abstract class Vehicle extends Garage implements Mobility {
 	// Attribute
 	private boolean hasTires;
 	private int doors;
@@ -8,11 +10,19 @@ public abstract class Vehicle {
 	private String model;
 	
 	// Constructor
-	public Vehicle(String manufacturer, String model, int doors) {
+	public Vehicle() {
+		super();
+		this.manufacturer = "Generic";
+		this.model = "Generic";
+		this.doors = 2;
+		this.hasTires = true;
+	}
+	
+	public Vehicle(String manufacturer, String model, int doors, boolean hasTires) {
 		this.manufacturer = manufacturer;
 		this.model = model;
 		this.doors = doors;
-		this.hasTires = true;
+		this.hasTires = hasTires;
 		
 	}
 	
