@@ -19,6 +19,11 @@ public class Bus extends Vehicle{
 		return company;
 	}
 
+	@Override
+	public String toString() {
+		return "Bus [capacity=" + capacity + ", company=" + company + "]";
+	}
+
 	
 
 }

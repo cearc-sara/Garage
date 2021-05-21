@@ -18,6 +18,11 @@ public class Car extends Vehicle{
 		return color;
 	}
 
+	@Override
+	public String toString() {
+		return "Car [seats=" + seats + ", color=" + color + "]";
+	}
+
 	
 
 }
